@@ -1,0 +1,14 @@
+h1{color:rgb(163, 214, 139);}
+
+body {background-color: grey;}
+
+#myMapID {
+    height: 700px;
+    width: 100%;
+    }
+
+    html,body{
+        height:100%;
+        margin: 0;
+        padding:0;
+    }

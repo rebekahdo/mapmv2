@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Node on Azure</title>
-</head>
-<body>
-<h1>Node.js and Express Hosted on Microsoft Azure Template</h1>
-<p>This repository serves as a template that can be used to create a Node.js and Express based website that can easily
-be hosted on Microsoft Azure.</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Map Mania Lite</title>
+    <link rel="stylesheet" href="index.css">
 
-Additional application functionality includes:<br />
-<a href="fetching-from-server.html">Accessing Node.js Server-Side Application Programming Interfaces (APIs)</a><br />
-<a href="fetching-remote-dog-breeds.html">Accessing Remote Application Programming Interfaces (APIs)</a>
+
+</head>
+<body onload="initApplication()">
+    <h1>Favorite Places game</h1>
+    <button id="directions" onclick="directions()">Getting Started!</button>
+    <div id="directionsPopup"></div>
+    <select name="Hint" id="Hint">
+        <option value="Hints">Select Your Hint</option>
+        <option value="1">Hint 1: Fourth biggest city in Louisiana! I grew up here. </option>
+        <option value="2">Hint 2: Home to Lewis University and where I currently live!</option>
+        <option value="3">Hint 3: Disney land is located here! </option>
+        <option value="4">Hint 4: Largest port in Texas and the largest city! Go Astros!</option>
+        <option value="5">Hint 5: Captial of Texas </option>
+        <option value="6">Hint 6: The biggest city in Illinois! The Windy City. </option>
+        <option value="7">Hint 7: Hollywood's Home!</option>
+        <option value="8">Hint 8: Casino captial of the US!</option>
+        <option value="9">Hint 9: Largest city in the US. Home of Broadway.</option>
+        <option value="10">Hint 10: Home of the White House! </option>
+      </select>
+
+    <button ondblclick= "winner()">Score:</button><input id="score-id" type="text" value="" size="2" disabled><br><br>
+    Guess: <input id="guess-id" type="text" value="" size="100"><button onclick="Guess()" >Submit</button><br><br>
+
+
+    <div id="myMapID"></div>
+
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz68GOV9qBVJTrr57TvUPVw1fiz9Z8HQY&callback=initMap"></script>
+    <script src="index.js"></script>
+    
 </body>
 </html>
